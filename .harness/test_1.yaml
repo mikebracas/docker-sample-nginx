@@ -1,0 +1,30 @@
+pipeline:
+  name: test 1
+  identifier: test_1
+  projectIdentifier: default_project
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: echo
+        identifier: echo
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: ShellScript_1
+                  identifier: ShellScript_1
+                  spec:
+                    shell: Bash
+                    executionTarget: {}
+                    source:
+                      type: Inline
+                      spec:
+                        script: echo "holaaaaa mike"
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
+        tags: {}
