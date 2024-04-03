@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_mikebracas_docker_sample_nginx_1712182346959-push-trigger-input-set
+  identifier: Build_mikebracas_docker_sample_nginx_1712182346959pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_mikebracas_docker_sample_nginx_1712182346959
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
