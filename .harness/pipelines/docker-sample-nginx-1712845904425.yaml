@@ -1,0 +1,33 @@
+pipeline:
+  name: Build docker-sample-nginx
+  identifier: Build_mikebracas_docker_sample_nginx_1712845921558
+  projectIdentifier: Maba
+  orgIdentifier: default
+  stages:
+    - stage:
+        name: Build
+        identifier: Build
+        type: CI
+        spec:
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: Echo Welcome Message
+                  identifier: Echo_Welcome_Message
+                  spec:
+                    shell: Sh
+                    command: echo "Welcome to Harness CI"
+          platform:
+            os: MacOS
+            arch: Amd64
+          runtime:
+            type: Docker
+            spec: {}
+  properties:
+    ci:
+      codebase:
+        connectorRef: account.Github
+        repoName: mikebracas/docker-sample-nginx
+        build: <+input>
