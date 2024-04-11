@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_mikebracas_docker_sample_nginx_1712845921558-push-trigger-input-set
+  identifier: Build_mikebracas_docker_sample_nginx_1712845921558pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: Maba
+  pipeline:
+    identifier: Build_mikebracas_docker_sample_nginx_1712845921558
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
